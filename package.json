@@ -1,7 +1,7 @@
 {
   "name": "vk-auth-prompt",
   "description": "CLI auth prompt for vk.com api - https://vk.com/dev",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel -d dist src",
