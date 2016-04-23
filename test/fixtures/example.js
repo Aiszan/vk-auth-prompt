@@ -4,12 +4,12 @@
 
 global.Promise = require('pinkie-promise');
 
-const vkAuth = require('../../dist/index');
-const Configstore = require('configstore');
-const pkg = require('../../package.json');
-const config = new Configstore(`${pkg.name}-test-example`);
+var vkAuth = require('../../dist/index');
+var Configstore = require('configstore');
+var pkg = require('../../package.json');
+var config = new Configstore(`${pkg.name}-test-example`);
 
-const vkTokenKey = 'vkToken';
+var vkTokenKey = 'vkToken';
 
 vkAuth('1', 'audio,offline', config.get.bind(config, vkTokenKey), config.set.bind(config, vkTokenKey))
   .then(token => {
